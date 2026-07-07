@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rent & Slay - บริการเช่ารองเท้าระดับพรีเมียม</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Kanit', sans-serif; }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-900">
+
+    <!-- Navigation Bar -->
+    <nav class="bg-black text-white sticky top-0 z-50 shadow-md">
+        <div class="max-w-6xl mx-auto px-4 py-4 flex justify-between items-center">
+            <a href="#" class="text-2xl font-bold tracking-wider text-amber-400">RENT & SLAY</a>
+            <div class="space-x-6 text-sm font-medium">
+                <a href="#catalog" class="hover:text-amber-400 transition">รองเท้าทั้งหมด</a>
+                <a href="#how-it-works" class="hover:text-amber-400 transition">วิธีเช่า</a>
+                <a href="#" class="bg-amber-400 text-black px-4 py-2 rounded-full hover:bg-amber-300 transition">ตะกร้าสินค้า (0)</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="bg-zinc-950 text-white py-20 px-4 text-center relative overflow-hidden">
+        <div class="max-w-3xl mx-auto relative z-10">
+            <span class="text-amber-400 text-sm font-semibold tracking-widest uppercase">Don't Buy It. Just Slay It.</span>
+            <h1 class="text-4xl md:text-6xl font-bold mt-3 mb-6 leading-tight">เช่ารองเท้าคู่โปรด <br><span class="text-amber-400">เดินสับแบบตัวแม่</span> ในราคาเบาๆ</h1>
+            <p class="text-gray-400 md:text-lg mb-8 max-w-xl mx-auto">รวมรองเท้าผ้าใบและรองเท้าส้นสูงแบรนด์เนมสำหรับออกงาน ไปเที่ยว หรือถ่ายคอนเทนต์ เริ่มต้นเพียงหลักร้อยต่อวัน</p>
+            <a href="#catalog" class="bg-white text-black font-semibold px-8 py-3 rounded-md hover:bg-amber-400 hover:text-black transition duration-300 shadow-lg">ดูรองเท้าทั้งหมด</a>
+        </div>
+        <!-- Decorative subtle background gradient -->
+        <div class="absolute inset-0 bg-gradient-to-r from-purple-900/20 to-amber-900/20 pointer-events-none"></div>
+    </header>
+
+    <!-- Catalog Section -->
+    <main id="catalog" class="max-w-6xl mx-auto px-4 py-16">
+        <div class="flex justify-between items-end mb-10">
+            <div>
+                <h2 class="text-3xl font-bold tracking-tight">รองเท้าพร้อมเช่าวันนี้</h2>
+                <p class="text-gray-500 text-sm mt-1">คัดสภาพคลีน 100% สวยเนี๊ยบทุกคู่ก่อนส่งถึงมือคุณ</p>
+            </div>
+            <div class="text-sm font-medium text-amber-600 underline cursor-pointer hover:text-amber-700">ดูทั้งหมด</div>
+        </div>
+
+        <!-- Shoe Grid -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+            
+            <!-- Shoe Item 1 -->
+            <div class="bg-white rounded-xl shadow-sm border border-gray-100 overflow-hidden group hover:shadow-xl transition duration-300">
+                <div class="h-64 bg-gray-100 relative flex items-center justify-center p-6">
+                    <!-- ใช้รูปสุ่มจาก Unsplash เป็นตัวอย่าง -->
+                    <img src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=600&auto=format&fit=crop&q=60" alt="Sneaker" class="max-h-full max-w-full object-contain group-hover:scale-105 transition duration-300">
+                    <span class="absolute top-4 left-4 bg-black text-white text-xs font-bold px-2.5 py-1 rounded">Popular</span>
+                </div>
+                <div class="p-5">
+                    <h3 class="font-bold text-lg mb-1">Nike Air Max Premium</h3>
+                    <p class="text-gray-500 text-xs mb-4">ไซส์ที่ว่าง: 38, 39, 40</p>
+                    <div class="flex justify-between items-center pt-3 border-t border-gray-100">
+                        <div>
+                            <span class="text-xl font-bold text-black">฿350</span>
+                            <span class="text-gray-500 text-xs"> / วัน</span>
+                        </div>
+                        <button onclick="rentShoe('Nike Air Max Premium')" class="bg-black text-white text-sm font-medium px-4 py-2 rounded hover:bg-amber-400 hover:text-black transition duration-300">
+                            เช่าตอนนี้
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Shoe Item 2 -->
+            <div class="bg-white rounded-xl shadow-sm border border-gray-100 overflow-hidden group hover:shadow-xl transition duration-300">
+                <div class="h-64 bg-gray-100 relative flex items-center justify-center p-6">
+                    <img src="https://images.unsplash.com/photo-1595950653106-6c9ebd614d3a?w=600&auto=format&fit=crop&q=60" alt="Heels" class="max-h-full max-w-full object-contain group-hover:scale-105 transition duration-300">
+                    <span class="absolute top-4 left-4 bg-pink-600 text-white text-xs font-bold px-2.5 py-1 rounded">Luxury</span>
+                </div>
+                <div class="p-5">
+                    <h3 class="font-bold text-lg mb-1">Pink Paradise High Heels</h3>
+                    <p class="text-gray-500 text-xs mb-4">ไซส์ที่ว่าง: 36, 37</p>
+                    <div class="flex justify-between items-center pt-3 border-t border-gray-100">
+                        <div>
+                            <span class="text-xl font-bold text-black">฿490</span>
+                            <span class="text-gray-500 text-xs"> / วัน</span>
+                        </div>
+                        <button onclick="rentShoe('Pink Paradise High Heels')" class="bg-black text-white text-sm font-medium px-4 py-2 rounded hover:bg-amber-400 hover:text-black transition duration-300">
+                            เช่าตอนนี้
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Shoe Item 3 -->
+            <div class="bg-white rounded-xl shadow-sm border border-gray-100 overflow-hidden group hover:shadow-xl transition duration-300">
+                <div class="h-64 bg-gray-100 relative flex items-center justify-center p-6">
+                    <img src="https://images.unsplash.com/photo-1606107557195-0e29a4b5b4aa?w=600&auto=format&fit=crop&q=60" alt="Sport" class="max-h-full max-w-full object-contain group-hover:scale-105 transition duration-300">
+                </div>
+                <div class="p-5">
+                    <h3 class="font-bold text-lg mb-1">Volt Green Running Pro</h3>
+                    <p class="text-gray-500 text-xs mb-4">ไซส์ที่ว่าง: 41, 42, 43</p>
+                    <div class="flex justify-between items-center pt-3 border-t border-gray-100">
+                        <div>
+                            <span class="text-xl font-bold text-black">฿290</span>
+                            <span class="text-gray-500 text-xs"> / วัน</span>
+                        </div>
+                        <button onclick="rentShoe('Volt Green Running Pro')" class="bg-black text-white text-sm font-medium px-4 py-2 rounded hover:bg-amber-400 hover:text-black transition duration-300">
+                            เช่าตอนนี้
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+    <!-- How It Works Section -->
+    <section id="how-it-works" class="bg-zinc-100 py-16 px-4">
+        <div class="max-w-4xl mx-auto text-center">
+            <h2 class="text-3xl font-bold mb-12">ขั้นตอนการเช่าสุดง่าย 3 สเต็ป</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="bg-white p-6 rounded-lg shadow-sm">
+                    <div class="w-12 h-12 bg-black text-white rounded-full flex items-center justify-center text-xl font-bold mx-auto mb-4">1</div>
+                    <h4 class="font-bold mb-2">เลือกรุ่นและไซส์</h4>
+                    <p class="text-gray-500 text-sm">เลือกรองเท้าคู่ที่ชอบ ระบุวันที่ต้องการใช้งานและไซส์ที่ต้องการ</p>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-sm">
+                    <div class="w-12 h-12 bg-black text-white rounded-full flex items-center justify-center text-xl font-bold mx-auto mb-4">2</div>
+                    <h4 class="font-bold mb-2">รับของและออกไป Slay</h4>
+                    <p class="text-gray-500 text-sm">บริการส่งด่วนถึงหน้าบ้าน นำไปใส่แมตช์ชุดทำคอนเทนต์หรือออกงานได้เลย</p>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-sm">
+                    <div class="w-12 h-12 bg-black text-white rounded-full flex items-center justify-center text-xl font-bold mx-auto mb-4">3</div>
+                    <h4 class="font-bold mb-2">ส่งคืนแบบชิลๆ</h4>
+                    <p class="text-gray-500 text-sm">เมื่อครบกำหนด ส่งคืนผ่านขนส่งได้ง่ายๆ ไม่ต้องเสียเวลาซักทำความสะอาดเอง</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-black text-gray-400 py-8 text-center text-sm border-t border-zinc-800">
+        <p>&copy; 2026 Rent & Slay. All rights reserved. ทำด้วย ❤️ เพื่อสายแฟชั่น</p>
+    </footer>
+
+    <!-- Simple Interactivity Script -->
+    <script>
+        function rentShoe(shoeName) {
+            alert('คุณได้เลือกเช่า: ' + shoeName + '\n\n(สเต็ปถัดไป: นำระบบนี้ไปเชื่อมต่อฐานข้อมูล Supabase เพื่อบันทึกออเดอร์!)');
+        }
+    </script>
+</body>
+</html>
